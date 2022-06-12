@@ -1,0 +1,35 @@
+[
+    {
+        "name": "LOST POETS",
+        "image": "https://lh3.googleusercontent.com/wcn8-ZqO9YCFIpZQ4bGdtsnouz79ToGkimGnMtwYDUebRC7kHYvQMZZ40djPzGWZtyfUEoRSl6swXUlg3bkOOBW81HBajtCyJO0wS8s=w600",
+        "description": "Poetric NFT event in metaverse. Join now.",
+        "event_type": "Virtual event",
+        "participants": 201,
+        "rating": 4.7,
+        "price": 0.001,
+        "blur_hash": "L7B3g19Z00~V~qRP4o%N0Kxa^kIo",
+        "date": "2022-08-27T08:00:00.000Z"
+    },
+    {
+        "name": "USA GALLERY KAPRIKA",
+        "image": "https://lh3.googleusercontent.com/w4QQ0-LKh0TsY2YumQGcKUhxENnz4yc2AqSt4bNAPaprDiaQF4w2zm2I3ZDADRX7x5qWGZ9OuZYgDhC67r73LXjxx52CKOhP7AH83w=w600",
+        "description": "In computing, avatars were popularised in the '80s as an on-screen representation of Internet.",
+        "event_type": "IRL event",
+        "participants": 85,
+        "rating": 4.3,
+        "price": 0.004,
+        "blur_hash": "LeF=z8XR~VWAR5ShRPofnjRjt7t7",
+        "date": "2022-07-23T21:31:00.000Z"
+    },
+    {
+        "name": "Archetype by Kjetil Golid - Art Blocks Curated",
+        "image": "https://lh3.googleusercontent.com/NBlMZYBQL--TCj344s1l9ndoKVQRVQ9QiEsVWYq0juXfZTcy2XRk-nGvwPRQ2sE_WZOLfwFklz47W_X8uRsjsbls2GNv_UVaoaWRSAQ=w600",
+        "description": "Archetype by Kjetil Golid - Art Blocks Curated",
+        "event_type": "Virtual event",
+        "participants": 452,
+        "rating": 4.9,
+        "price": 0.01,
+        "blur_hash": "LUIX:1oLxts:ELxZ%2s:~BWBs:WV",
+        "date": "2022-05-31T11:00:00.000Z"
+    }
+]

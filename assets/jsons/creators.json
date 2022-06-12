@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Adel Wishling",
+        "description": "Concept ART",
+        "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        "blur_hash": "L35h76t756-p~CofEL%2NFWVt8ay"
+    },
+    {
+        "name": "Anar Bayram",
+        "description": "Photographer",
+        "image": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        "blur_hash": "LWIX,D%Mt,j]~qofxaflE2j[iwof"
+    },
+    {
+        "name": "Murad Ahmadov",
+        "description": "Concept ART",
+        "image": "https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        "blur_hash": "LSCQ[z.l5+9YViZ~MuROMyiyn1tU"
+    },
+    {
+        "name": "Ramo Nastakal",
+        "description": "Videographer",
+        "image": "https://images.unsplash.com/photo-1608791952180-79294109d843?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        "blur_hash": "LWJ8V0?b~qIU_3t7M{M{ofM{j[j["
+    },
+    {
+        "name": "Matin Abdulla",
+        "description": "UI/UX Designer",
+        "image": "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        "blur_hash": "LKKm-4%M*0tS8^WBt7WATLbIicsn"
+    }
+]

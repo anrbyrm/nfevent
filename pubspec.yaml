@@ -1,0 +1,82 @@
+name: nfevent
+description: Crypto Event app UI created in Flutter.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+
+dependencies:
+  cupertino_icons: ^1.0.2
+  flutter:
+    sdk: flutter
+  flutter_blurhash: ^0.7.0
+  flutter_hooks: ^0.18.3
+  flutter_svg: ^1.0.3
+  intl: ^0.17.0
+  lint: ^1.8.2
+
+dev_dependencies:
+  flutter_lints: ^1.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/icons/
+    - assets/fonts/
+    - assets/jsons/
+
+  fonts:
+    - family: zona
+      fonts:
+        - asset: assets/fonts/ZonaPro-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/ZonaPro-ThinItalic.ttf
+          weight: 100
+          style: italic
+        - asset: assets/fonts/ZonaPro-Hairline.ttf
+          weight: 200
+        - asset: assets/fonts/ZonaPro-HairlineItalic.ttf
+          weight: 200
+          style: italic
+        - asset: assets/fonts/ZonaPro-Light.ttf
+          weight: 300
+        - asset: assets/fonts/ZonaPro-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/ZonaPro-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/ZonaPro-RegularItalic.ttf
+          weight: 400
+          style: italic
+        - asset: assets/fonts/ZonaPro-SemiBold.ttf
+          weight: 500
+        - asset: assets/fonts/ZonaPro-SemiBoldItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/ZonaPro-Bold.ttf
+          weight: 600
+        - asset: assets/fonts/ZonaPro-BoldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: assets/fonts/ZonaPro-ExtraBold.ttf
+          weight: 700
+        - asset: assets/fonts/ZonaPro-ExtraBoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/ZonaPro-Black.ttf
+          weight: 800
+        - asset: assets/fonts/ZonaPro-BlackItalic.ttf
+          weight: 800
+          style: italic
+        - asset: assets/fonts/ZonaPro-Ultra.ttf
+          weight: 900
+        - asset: assets/fonts/ZonaPro-UltraItalic.ttf
+          weight: 900
+          style: italic
