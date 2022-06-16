@@ -13,13 +13,13 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_blurhash: ^0.7.0
-  flutter_hooks: ^0.18.3
+  flutter_hooks: ^0.18.4
   flutter_svg: ^1.0.3
   intl: ^0.17.0
   lint: ^1.8.2
 
 dev_dependencies:
-  flutter_lints: ^1.0.0
+  flutter_lints: ^2.0.1
   flutter_test:
     sdk: flutter
 
