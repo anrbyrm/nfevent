@@ -34,11 +34,18 @@ class HomePage extends HookWidget {
           .toList();
     }
 
+    final scrollController = useScrollController();
+    final offset = useState<double>(0);
+
     final eventsFuture = useMemoized(getEvents);
     final events = useFuture(eventsFuture);
 
     final creatorsFuture = useMemoized(getCreators);
     final creators = useFuture(creatorsFuture);
+
+    scrollController.addListener(() {
+      offset.value = scrollController.offset;
+    });
 
     return Scaffold(
       extendBody: true,
@@ -83,13 +90,18 @@ class HomePage extends HookWidget {
                     else
                       SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
+                        controller: scrollController,
                         physics: const BouncingScrollPhysics(),
                         child: Row(
                           children: List.generate(
                             events.data!.length,
                             (index) => Row(
                               children: [
-                                CardWidget(events.data![index], creators.data!),
+                                CardWidget(
+                                  events.data![index],
+                                  creators.data!,
+                                  offset,
+                                ),
                                 if (index == events.data!.length - 1)
                                   const SizedBox.square(dimension: 0)
                                 else
