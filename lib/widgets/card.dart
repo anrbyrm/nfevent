@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_blurhash/flutter_blurhash.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/intl.dart';
 import 'package:nfevent/constants.dart';
@@ -9,19 +8,20 @@ import 'package:nfevent/models/event.dart';
 import 'package:nfevent/pages/details.dart';
 
 class CardWidget extends StatelessWidget {
-  const CardWidget(this.event, this.users, {Key? key}) : super(key: key);
+  const CardWidget(this.event, this.users, this.offset, {Key? key})
+      : super(key: key);
 
   final EventModel? event;
   final List<Creator> users;
+  final ValueNotifier<double>? offset;
 
   @override
   Widget build(BuildContext context) {
-    final _bgImageKey = GlobalKey();
-
     return GestureDetector(
       onTap: () {
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (_) => DetailsPage(event, users)));
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (_) => DetailsPage(event, users)),
+        );
       },
       child: Container(
         width: MediaQuery.of(context).size.width * .8,
@@ -36,44 +36,32 @@ class CardWidget extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              AspectRatio(
-                aspectRatio: 16 / 12,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(borderRadius),
-                  child: Stack(
-                    children: <Widget>[
-                      Flow(
-                        delegate: ParallaxFlowDelegate(
-                          scrollable: Scrollable.of(context),
-                          itemContext: context,
-                          bgImageKey: _bgImageKey,
-                        ),
-                        children: [
-                          BlurHash(
-                            key: _bgImageKey,
-                            hash: event!.blurHash!,
-                            image: event!.image,
-                            imageFit: BoxFit.cover,
-                          ),
-                        ],
-                      ),
-                      Positioned.fill(
-                        child: DecoratedBox(
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [
-                                Colors.transparent,
-                                Colors.black.withOpacity(0.7)
-                              ],
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter,
-                              stops: const [0.6, 0.95],
-                            ),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(borderRadius),
+                child: Stack(
+                  children: <Widget>[
+                    Image.network(
+                      event!.image!,
+                      height: MediaQuery.of(context).size.height * .35,
+                      alignment: Alignment(-(offset!.value / 1000).abs(), 0),
+                      fit: BoxFit.none,
+                    ),
+                    Positioned.fill(
+                      child: DecoratedBox(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Colors.transparent,
+                              Colors.black.withOpacity(0.7)
+                            ],
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            stops: const [0.6, 0.95],
                           ),
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
               const SizedBox(height: verticalPadding),
@@ -192,10 +180,7 @@ class ParallaxFlowDelegate extends FlowDelegate {
 
   @override
   BoxConstraints getConstraintsForChild(int i, BoxConstraints constraints) {
-    return BoxConstraints.tightFor(
-      height: constraints.maxHeight,
-      width: constraints.maxWidth,
-    );
+    return BoxConstraints.tightFor(height: constraints.maxHeight);
   }
 
   @override
@@ -211,7 +196,7 @@ class ParallaxFlowDelegate extends FlowDelegate {
     final viewportDimension = scrollable!.position.viewportDimension;
     final scrollFraction = (listItemOffset.dx / viewportDimension).clamp(0, 1);
 
-    final verticalAlignment = Alignment(scrollFraction * 5 - 1, 0);
+    final verticalAlignment = Alignment(0, scrollFraction * 2 - 1);
 
     final backgroundSize =
         (bgImageKey!.currentContext!.findRenderObject() as RenderBox?)!.size;
@@ -222,7 +207,7 @@ class ParallaxFlowDelegate extends FlowDelegate {
     context.paintChild(
       0,
       transform:
-          Transform.translate(offset: Offset(childRect.top, 0)).transform,
+          Transform.translate(offset: Offset(0, childRect.left)).transform,
     );
   }
 
